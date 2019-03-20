@@ -59,18 +59,22 @@ html, body {
 }
 
 
-//SETTING VARIABLES HERE //
+//SETTING VARIABLES HERE //////////////////////////////////////
 
-//fonts not working //
+//@cta_color: red;
+
+//@working_grid: {
+//	border: solid black 1px;
+//}
+/*
 @fontstack:<link href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans+Narrow" rel="stylesheet">; 
 
 
-* {
-	@bordersketch()
+* { border: @bordersketch;
 }
-@bordersketch() {
-	border: 1px solid red
-} 
+
+@bordersketch: 1px solid red;
+
 
 .center(){
 	display:flex;
@@ -78,6 +82,8 @@ html, body {
 	justify-content: center;
 	align-items: center;
 }
+
+*/
 
 /*  "STYLING BELOW 
 #intro {
@@ -91,52 +97,75 @@ html, body {
 // CSS COPIED HERE //
 
 html, body {
-height: 100%;
-background-color: none;
-}
+	height: 100%;
+	background-color: none;
+	font-family: 'PT+Sans+Narrow', sans-serif;
+	}
+	
+	h1, h2, h3, h4, h5, button {
+	font-size: 18px;
+	margin-bottom: 15px;
+	font-family: 'Oswald', sans-serif;
+	}
+	
+	p {
+	line-height: 1.4;
+	font-family: 'PT+Sans+Narrow', sans-serif;
+	}
+	
+	#main-container{
+	border:solid 5rem gold;
+	max-width: 800px;
+	margin: 1rem 1rem 1rem 1rem;
+	padding: 1rem;
+	}
+	
+	.hero_landing {
+	max-width: 100%;
+	border: solid 1px black;
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	align-content: center;
+	}
+	
+	.landing_image {
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items: center;
+	max-width: 50%;
+	border: @bordersketch;
+	} 
 
-h1, h2, h3, h4, h5, button {
-font-size: 18px;
-margin-bottom: 15px;
-font-family: 'Oswald', sans-serif;
-}
+	#landing_image_update {
+		display: inline-block;
+	}
 
-p {
-line-height: 1.4;
-font-family: 'PT+Sans+Narrow', sans-serif;
-}
+	.intro {
+	max-width:50%;
+	}
 
-#main-container{
-max-width: 800px;
-margin: 0 auto;
-padding: 1rem;
-}
+	button {
+	border: solid 1px black;         /*declare grey*/
+	background: none;
+	border-radius: 45px;
+	margin-top: 20px;
+	}
+	
+	nav {
+	/*flex mixin here*/
+	
+	}
 
-.hero_landing {
-border: solid 1px black;
-display: flex;
-flex-direction:row;
-justify-content: center;
-align-content: center;
-}
-
-#landing_image {
-width:50%;
-} 
-
-#intro {
-width:50%;
-}
-button {
-border: solid 1px @grey;         /*declare grey*/
-background: none;
-border-radius: 45px;
-}
-
-nav {
-/*flex mixin here*/
-
-}
-}
+	.skills {
+		border: solid green 1px;
+		display:flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	
 
 
