@@ -61,7 +61,7 @@ html, body {
 
 //SETTING VARIABLES HERE //
 
-//fonts not working yet
+//fonts not working //
 @fontstack:<link href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans+Narrow" rel="stylesheet">; 
 
 
@@ -79,14 +79,64 @@ html, body {
 	align-items: center;
 }
 
-//  "STYLING BELOW //
+/*  "STYLING BELOW 
 #intro {
 	.center()
 	@bordersketch();
 }
 #landing_image {
 	.center()
-	
+	*/
+
+// CSS COPIED HERE //
+
+html, body {
+height: 100%;
+background-color: none;
+}
+
+h1, h2, h3, h4, h5, button {
+font-size: 18px;
+margin-bottom: 15px;
+font-family: 'Oswald', sans-serif;
+}
+
+p {
+line-height: 1.4;
+font-family: 'PT+Sans+Narrow', sans-serif;
+}
+
+#main-container{
+max-width: 800px;
+margin: 0 auto;
+padding: 1rem;
+}
+
+.hero_landing {
+border: solid 1px black;
+display: flex;
+flex-direction:row;
+justify-content: center;
+align-content: center;
+}
+
+#landing_image {
+width:50%;
+} 
+
+#intro {
+width:50%;
+}
+button {
+border: solid 1px @grey;         /*declare grey*/
+background: none;
+border-radius: 45px;
+}
+
+nav {
+/*flex mixin here*/
+
+}
 }
 
 
