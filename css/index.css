@@ -133,16 +133,15 @@ table {
 }
 /* writing SOME CSS first */
 
-html, body,  {
+html, body {
   height: 100%;
   background-color: none;
-   
 }
 
-h1, h2, h3, h4, h5, button,  {
+h1, h2, h3, h4, h5, button {
   font-size: 18px;
   margin-bottom: 15px;
-  font-family:'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 p {
@@ -151,7 +150,7 @@ p {
 }
 
 #main-container{
-  max-width: 1080px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -164,8 +163,22 @@ p {
   align-content: center;
 }
 
+#landing_image {
+  width:50%;
+} 
+
+#intro {
+  width:50%;
+}
+button {
+  border: solid 1px @grey;         /*declare grey*/
+  background: none;
+  border-radius: 45px;
+}
+
 nav {
   /*flex mixin here*/
+  
 }
 
 
