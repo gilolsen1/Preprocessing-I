@@ -135,9 +135,24 @@ body {
   height: 100%;
   background-color: none;
 }
-* {
-  border: 1px solid red;
+/*
+@fontstack:<link href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans+Narrow" rel="stylesheet">; 
+
+
+* { border: @bordersketch;
 }
+
+@bordersketch: 1px solid red;
+
+
+.center(){
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center;
+}
+
+*/
 /*  "STYLING BELOW 
 #intro {
 	.center()
@@ -150,13 +165,16 @@ html,
 body {
   height: 100%;
   background-color: none;
+  font-family: 'PT+Sans+Narrow', sans-serif;
 }
 h1,
 h2,
 h3,
 h4,
 h5,
-button {
+button,
+ul,
+li {
   font-size: 18px;
   margin-bottom: 15px;
   font-family: 'Oswald', sans-serif;
@@ -168,7 +186,7 @@ p {
 #main-container {
   border: solid 5rem gold;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 1rem 1rem 1rem 1rem;
   padding: 1rem;
 }
 .hero_landing {
@@ -179,15 +197,17 @@ p {
   justify-content: center;
   align-content: center;
 }
-#landing_image {
+.landing_image {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   max-width: 50%;
-  border: 1px solid red;
 }
-#intro {
+#landing_image_update {
+  display: inline-block;
+}
+.intro {
   max-width: 50%;
 }
 button {
@@ -195,7 +215,33 @@ button {
   /*declare grey*/
   background: none;
   border-radius: 45px;
+  margin-top: 20px;
 }
-nav {
+.navbar {
   /*flex mixin here*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-decoration: none;
+}
+.navbar a {
+  text-decoration: none;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.navbar :hover {
+  background-color: black;
+  color: white;
+}
+.skills {
+  border: solid green 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#workhistory {
+  display: block;
+  text-align: center;
 }

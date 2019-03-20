@@ -102,7 +102,7 @@ html, body {
 	font-family: 'PT+Sans+Narrow', sans-serif;
 	}
 	
-	h1, h2, h3, h4, h5, button {
+	h1, h2, h3, h4, h5, button, ul, li {
 	font-size: 18px;
 	margin-bottom: 15px;
 	font-family: 'Oswald', sans-serif;
@@ -135,7 +135,7 @@ html, body {
 	justify-content:center;
 	align-items: center;
 	max-width: 50%;
-	border: @bordersketch;
+	//border: @bordersketch;   HOLD OF FOR NOW, get it working first
 	} 
 
 	#landing_image_update {
@@ -153,19 +153,40 @@ html, body {
 	margin-top: 20px;
 	}
 	
-	nav {
+	.navbar {
 	/*flex mixin here*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-decoration:none;
+
+		a {
+			text-decoration:none;
+			padding: 1rem;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			
+		}
+
+		:hover {
+			background-color: black;
+			color:white;
+		}
 	
 	}
 
 	.skills {
 		border: solid green 1px;
 		display:flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		
 	}
 	
+	#workhistory {
+		display:block;
+		text-align: center;
+	}
 
 
