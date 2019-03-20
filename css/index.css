@@ -127,11 +127,46 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
+
 * {
   box-sizing: border-box;
 }
-html,
-body {
+/* writing SOME CSS first */
+
+html, body,  {
   height: 100%;
   background-color: none;
+   
 }
+
+h1, h2, h3, h4, h5, button,  {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-family:'Oswald', sans-serif;
+}
+
+p {
+  line-height: 1.4;
+  font-family: 'PT+Sans+Narrow', sans-serif;
+}
+
+#main-container{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hero_landing {
+  border: solid 1px black;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-content: center;
+}
+
+nav {
+  /*flex mixin here*/
+}
+
+
+
