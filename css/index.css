@@ -181,9 +181,11 @@ li {
 }
 h1 {
   font-size: 50px;
+  color: black;
 }
 h2 {
   font-size: 25px;
+  color: #2B4650;
 }
 p {
   line-height: 1.4;
@@ -228,8 +230,10 @@ display: block;
 	
 */
 }
-#landing_image_update {
+#landing_image_water {
   display: flex;
+  height: 100%;
+  width: 100%;
 }
 .intro {
   max-width: 50%;
@@ -272,4 +276,7 @@ button {
 #workhistory {
   display: block;
   text-align: center;
+}
+.experience_chunk {
+  border: solid black 1px;
 }

@@ -119,10 +119,12 @@ html, body {
 
 	h1 {
 		font-size: 50px;
+		color: @h1fontcolor;
 	}
 
 	h2 {
 		font-size: 25px;
+		color: @h2fontcolor;
 	}
 	
 	p {
@@ -175,8 +177,10 @@ display: block;
 */
 } 
 
-	#landing_image_update {   //NEED TO STYLE WATER //
+	#landing_image_water {   //NEED TO STYLE WATER //
 		display: flex;
+		height:100%;
+		width:100%;
 	}
 
 	.intro {
@@ -230,4 +234,8 @@ display: block;
 		text-align: center;
 	}
 
+	.experience_chunk {
+		//FLEX MIXIN HERE  //
+		border: solid black 1px;
+	}
 
