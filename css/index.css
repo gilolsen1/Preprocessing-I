@@ -230,7 +230,7 @@ display: block;
 	
 */
 }
-#landing_image_water {
+.landing_image #landing_image_water {
   display: flex;
   height: 100%;
   width: 100%;

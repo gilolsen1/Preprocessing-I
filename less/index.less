@@ -102,8 +102,20 @@ html, body {
 
 
 ////CENTERING MIXINS///
+.center() {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
 
+.imgcontrol(){
+		display: flex;
+		height:100%;
+		width:100%;
+}
 
+//END MIXINS BEGIN CSS//
 
 html, body {
 	height: 100%;
@@ -141,24 +153,46 @@ html, body {
 	}
 	
 	.hero_landing {
+	margin: 20px;
+	padding: 20px;
 	max-width: 100%;
 	border: solid 1px red;
+	.center() 
+	/*mixin material
 	display: flex;
 	flex-direction:row;
 	justify-content: center;
 	align-content: center;
+	*/
 	}
 	
-	.landing_image {
+	.intro {
+		display: flex;
+		height:100%;
+		width:100%;
+		border: solid 5px purple;   //WHY NOT APPEARING? //
+		}
+
+	/*.landing_image {              COPIED THIS FROM TEMPLATE, SIMPLER VERSION BELOW ON JUST IMAGE WORKS
 	object-fit: cover;
     object-position: center;
-    
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 0;
+    border-radius: 0; */
 
+	#landing_image_water {   //NEED TO STYLE WATER //
+		
+		.imgcontrol(){
+			
+		}
+		//commented out imgcontrol and it STILL worked (even though it didnt before without the below code)
+		/*line next three lines are in.imgcontrol()
+		display: flex;
+		height:100%;
+		width:100%; */
+	}
 
 	/*
 
@@ -177,15 +211,9 @@ display: block;
 */
 } 
 
-	#landing_image_water {   //NEED TO STYLE WATER //
-		display: flex;
-		height:100%;
-		width:100%;
-	}
+	
 
-	.intro {
-	max-width:50%;
-	}
+
 
 	button {
 	border: solid 0px black;         /*add a pixel if needed*/
@@ -201,10 +229,14 @@ display: block;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	flex-wrap: nowrap;
 	background-color: black;
 	line-height: 50px;
 
 		a {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
 			text-decoration:none;
 			color: @linktext_color;
 			margin-top: .1rem;
