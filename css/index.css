@@ -164,7 +164,7 @@ body {
 html,
 body {
   height: 100%;
-  background-color: none;
+  background-color: #F4F4F4;
   font-family: 'PT+Sans+Narrow', sans-serif;
 }
 h1,
@@ -179,9 +179,16 @@ li {
   margin-bottom: 15px;
   font-family: 'Oswald', sans-serif;
 }
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 25px;
+}
 p {
   line-height: 1.4;
   font-family: 'PT+Sans+Narrow', sans-serif;
+  color: #212121;
 }
 #main-container {
   border: solid 5rem gold;
@@ -191,30 +198,48 @@ p {
 }
 .hero_landing {
   max-width: 100%;
-  border: solid 1px black;
+  border: solid 1px red;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
 }
 .landing_image {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  max-width: 50%;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  /*
+
+display: block;
+    position: absolute;
+
+	my attempt
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items: center;
+	max-width: 50%;
+	max-height:100%;
+	//border: @bordersketch;   HOLD OF FOR NOW, get it working first
+	
+*/
 }
 #landing_image_update {
-  display: inline-block;
+  display: flex;
 }
 .intro {
   max-width: 50%;
 }
 button {
-  border: solid 1px black;
-  /*declare grey*/
-  background: none;
-  border-radius: 45px;
+  border: solid 0px black;
+  /*add a pixel if needed*/
+  color: black;
+  background: #7AC3DD;
+  border-radius: 30px;
   margin-top: 20px;
 }
 .navbar {
@@ -222,17 +247,20 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  text-decoration: none;
+  background-color: black;
+  line-height: 50px;
 }
 .navbar a {
   text-decoration: none;
+  color: #7AC3DD;
   margin-top: 0.1rem;
   margin-bottom: 0.1rem;
   padding: 0.1rem 50px 0.1rem 50px;
+  width: auto;
 }
 .navbar :hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #7AC3DD;
 }
 .skills {
   border: solid green 1px;

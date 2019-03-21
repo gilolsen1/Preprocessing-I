@@ -59,13 +59,7 @@ html, body {
 }
 
 
-//SETTING VARIABLES HERE //////////////////////////////////////
 
-//@cta_color: red;
-
-//@working_grid: {
-//	border: solid black 1px;
-//}
 /*
 @fontstack:<link href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans+Narrow" rel="stylesheet">; 
 
@@ -96,9 +90,24 @@ html, body {
 
 // CSS COPIED HERE //
 
+//SETTING VARIABLES HERE //////////////////////////////////////
+
+@h1fontcolor: black;
+@h2fontcolor: #2B4650;
+@standardcolor:rgb(33, 33, 33);
+@linktext_color: #7AC3DD;
+@cta_fontcolor:black;
+@cta_button_background:#7AC3DD;
+@fullbackground:#F4F4F4;
+
+
+////CENTERING MIXINS///
+
+
+
 html, body {
 	height: 100%;
-	background-color: none;
+	background-color: @fullbackground;
 	font-family: 'PT+Sans+Narrow', sans-serif;
 	}
 	
@@ -107,14 +116,23 @@ html, body {
 	margin-bottom: 15px;
 	font-family: 'Oswald', sans-serif;
 	}
+
+	h1 {
+		font-size: 50px;
+	}
+
+	h2 {
+		font-size: 25px;
+	}
 	
 	p {
 	line-height: 1.4;
 	font-family: 'PT+Sans+Narrow', sans-serif;
+	color:@standardcolor;
 	}
 	
-	#main-container{
-	border:solid 5rem gold;
+	#main-container {
+	border:solid 5rem gold;   //WHERE IS THIS COLOR ?? //
 	max-width: 800px;
 	margin: 1rem 1rem 1rem 1rem;
 	padding: 1rem;
@@ -122,7 +140,7 @@ html, body {
 	
 	.hero_landing {
 	max-width: 100%;
-	border: solid 1px black;
+	border: solid 1px red;
 	display: flex;
 	flex-direction:row;
 	justify-content: center;
@@ -130,16 +148,35 @@ html, body {
 	}
 	
 	.landing_image {
+	object-fit: cover;
+    object-position: center;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+
+
+	/*
+
+display: block;
+    position: absolute;
+
+	my attempt
 	display: flex;
 	flex-direction: row;
 	justify-content:center;
 	align-items: center;
 	max-width: 50%;
+	max-height:100%;
 	//border: @bordersketch;   HOLD OF FOR NOW, get it working first
-	} 
+	
+*/
+} 
 
-	#landing_image_update {
-		display: inline-block;
+	#landing_image_update {   //NEED TO STYLE WATER //
+		display: flex;
 	}
 
 	.intro {
@@ -147,10 +184,12 @@ html, body {
 	}
 
 	button {
-	border: solid 1px black;         /*declare grey*/
-	background: none;
-	border-radius: 45px;
+	border: solid 0px black;         /*add a pixel if needed*/
+	color: @cta_fontcolor;
+	background: @cta_button_background;
+	border-radius: 30px;
 	margin-top: 20px;
+	
 	}
 	
 	.navbar {
@@ -158,19 +197,21 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	background-color: black;
+	line-height: 50px;
 
 		a {
 			text-decoration:none;
+			color: @linktext_color;
 			margin-top: .1rem;
 			margin-bottom: .1rem;
-			padding: .1rem 50px .1rem 50px
-			height:100%;
+			padding: .1rem 50px .1rem 50px;
 			width:auto;
 		}
 
 		:hover {
-			background-color: black;
-			color:white;
+			background-color: white;
+			color: @linktext_color;
 		}
 	
 	}
