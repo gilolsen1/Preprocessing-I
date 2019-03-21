@@ -157,7 +157,8 @@ html, body {
 	padding: 20px;
 	max-width: 100%;
 	border: solid 1px red;
-	.center(); 
+	.center();   //mixin attempt//
+
 	/*mixin material
 	display: flex;
 	flex-direction:row;
@@ -168,6 +169,7 @@ html, body {
 	
 	.intro {
 		display: flex;
+		flex-direction: column;
 		height:100%;
 		width:100%;
 		border: solid 5px purple;   //WHY NOT APPEARING? //
@@ -184,15 +186,16 @@ html, body {
 
 	#landing_image_water {   //NEED TO STYLE WATER //
 		
-		.imgcontrol(){
-
-		}
-		//commented out imgcontrol and it STILL worked (even though it didnt before without the below code)
-		/*line next three lines are in.imgcontrol()
 		display: flex;
 		height:100%;
-		width:100%; */
+		width:100%; 
 	}
+		/*.imgcontrol(){
+line next three lines are in.imgcontrol()
+		}*/
+		
+		//commented out imgcontrol and it STILL worked (even though it didnt before without the below code)
+	
 
 	/*
 
@@ -209,7 +212,7 @@ display: block;
 	//border: @bordersketch;   HOLD OF FOR NOW, get it working first
 	
 */
-} 
+
 
 	
 
