@@ -54,6 +54,223 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background-color:none;
 }
+
+
+
+/*
+@fontstack:<link href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans+Narrow" rel="stylesheet">; 
+
+
+* { border: @bordersketch;
+}
+
+@bordersketch: 1px solid red;
+
+
+.center(){
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center;
+}
+
+*/
+
+/*  "STYLING BELOW 
+#intro {
+	.center()
+	@bordersketch();
+}
+#landing_image {
+	.center()
+	*/
+
+// CSS COPIED HERE //
+
+//SETTING VARIABLES HERE //////////////////////////////////////
+
+@h1fontcolor: black;
+@h2fontcolor: #2B4650;
+@standardcolor:rgb(33, 33, 33);
+@linktext_color: #7AC3DD;
+@cta_fontcolor:black;
+@cta_button_background:#7AC3DD;
+@fullbackground:#F4F4F4;
+
+
+////CENTERING MIXINS///
+.center() {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.imgcontrol(){
+		display: flex;
+		height:100%;
+		width:100%;
+}
+
+//END MIXINS BEGIN CSS//
+
+html, body {
+	height: 100%;
+	background-color: @fullbackground;
+	font-family: 'PT+Sans+Narrow', sans-serif;
+	}
+	
+	h1, h2, h3, h4, h5, button, ul, li {
+	font-size: 18px;
+	margin-bottom: 15px;
+	font-family: 'Oswald', sans-serif;
+	}
+
+	h1 {
+		font-size: 50px;
+		color: @h1fontcolor;
+	}
+
+	h2 {
+		font-size: 25px;
+		color: @h2fontcolor;
+	}
+	
+	p {
+	line-height: 1.4;
+	font-family: 'PT+Sans+Narrow', sans-serif;
+	color:@standardcolor;
+	}
+	
+	#main-container {
+	border:solid 5rem gold;   //WHERE IS THIS COLOR ?? //
+	max-width: 800px;
+	margin: 1rem 1rem 1rem 1rem;
+	padding: 1rem;
+	}
+	
+	.hero_landing {
+	margin: 20px;
+	padding: 20px;
+	max-width: 100%;
+	border: solid 1px red;
+	.center();   //mixin attempt//
+
+	/*mixin material
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	align-content: center;
+	*/
+	}
+	
+	.intro {
+		display: flex;
+		flex-direction: column;
+		height:100%;
+		width:100%;
+		border: solid 5px purple;   //WHY NOT APPEARING? //
+		}
+
+	/*.landing_image {              COPIED THIS FROM TEMPLATE, SIMPLER VERSION BELOW ON JUST IMAGE WORKS
+	object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0; */
+
+	#landing_image_water {   //NEED TO STYLE WATER //
+		
+		display: flex;
+		height:100%;
+		width:100%; 
+	}
+		/*.imgcontrol(){
+line next three lines are in.imgcontrol()
+		}*/
+		
+		//commented out imgcontrol and it STILL worked (even though it didnt before without the below code)
+	
+
+	/*
+
+display: block;
+    position: absolute;
+
+	my attempt
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items: center;
+	max-width: 50%;
+	max-height:100%;
+	//border: @bordersketch;   HOLD OF FOR NOW, get it working first
+	
+*/
+
+
+	
+
+
+
+	button {
+	border: solid 0px black;         /*add a pixel if needed*/
+	color: @cta_fontcolor;
+	background: @cta_button_background;
+	border-radius: 30px;
+	margin-top: 20px;
+	
+	}
+	
+	.navbar {
+	/*flex mixin here*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+	background-color: black;
+	line-height: 50px;
+
+		a {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			text-decoration:none;
+			color: @linktext_color;
+			margin-top: .1rem;
+			margin-bottom: .1rem;
+			padding: .1rem 50px .1rem 50px;
+			width:auto;
+		}
+
+		:hover {
+			background-color: white;
+			color: @linktext_color;
+		}
+	
+	}
+
+	.skills {
+		border: solid green 1px;
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	
+	#workhistory {
+		display:block;
+		text-align: center;
+	}
+
+	.experience_chunk {
+		//FLEX MIXIN HERE  //
+		border: solid black 1px;
+	}
 
